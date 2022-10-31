@@ -31,11 +31,8 @@ const convertValue = () => {
         }).format(inputReal / euro)
     }
 
-    if (select.value === '₿ Bitcoin') {
-        currencyTextValue.innerHTML = new Intl.NumberFormat('BTC', {
-            style: 'currency',
-            currency: 'BTC'
-        }).format(inputReal / bitCoin)
+    if(select.value === '₿ Bitcoin'){
+        currencyTextValue.innerHTML = ((inputReal / bitCoin).toFixed(6))
     }
 }
 
