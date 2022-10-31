@@ -4,6 +4,7 @@ const select = document.getElementById('select-currency')
 const dolar = 5.30
 const euro = 5.17
 const bitCoin = 106465.44
+const iene = 0.035
 
 const convertValue = () => {
     const inputReal = document.getElementById('Real-value').value
@@ -34,6 +35,13 @@ const convertValue = () => {
     if(select.value === '₿ Bitcoin'){
         currencyTextValue.innerHTML = ((inputReal / bitCoin).toFixed(6))
     }
+
+    if(select.value === '￥ Iene japonês'){
+        currencyTextValue.innerHTML = new Intl.NumberFormat('ja-JP', {
+            style: 'currency',
+            currency: 'JPY'
+        }).format(inputReal / iene)
+    }
 }
 
 const selectCurrency = () => {
@@ -53,6 +61,11 @@ const selectCurrency = () => {
     if (select.value === '₿ Bitcoin') {
         currencyName.innerHTML = 'Bitcoin'
         currencyImg.src = './assets/BitcoinIcon.svg'
+    }
+
+    if(select.value === '￥ Iene japonês'){
+        currencyName.innerHTML = 'Iene japonês'
+        currencyImg.src = './assets/JpnIconCoin.png'
     }
     convertValue()
 }
