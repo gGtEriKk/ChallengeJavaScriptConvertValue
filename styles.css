@@ -132,7 +132,7 @@ section {
     display: block;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .Container {
         width: 100%;
         margin: 0;
