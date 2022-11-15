@@ -1,16 +1,20 @@
 const button = document.getElementById('convert-button')
 const select = document.getElementById('select-currency')
 
-const dolar = 5.30
-const euro = 5.17
-const bitCoin = 106465.44
 const iene = 0.035
 
-const convertValue = () => {
+const convertValue = async () => {
     const inputReal = document.getElementById('Real-value').value
     const realTextValue = document.getElementById('real-text-value')
     const currencyTextValue = document.getElementById('currency-text-value')
 
+    const apiData = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+    console.log(apiData)
+
+    const dolar = apiData.USDBRL.high
+    const euro = apiData.EURBRL.high
+    const bitCoin = apiData.BTCBRL.high
     // realTextValue.innerHTML = inputReal
     // currencyTextValue.innerHTML = (inputReal / dolar)
     realTextValue.innerHTML = new Intl.NumberFormat('pt-BR', {
@@ -32,11 +36,11 @@ const convertValue = () => {
         }).format(inputReal / euro)
     }
 
-    if(select.value === '₿ Bitcoin'){
-        currencyTextValue.innerHTML = ((inputReal / bitCoin).toFixed(6))
+    if (select.value === '₿ Bitcoin') {
+        currencyTextValue.innerHTML = ((inputReal / bitCoin).toFixed(6)/1000)
     }
 
-    if(select.value === '￥ Iene japonês'){
+    if (select.value === '￥ Iene japonês') {
         currencyTextValue.innerHTML = new Intl.NumberFormat('ja-JP', {
             style: 'currency',
             currency: 'JPY'
@@ -63,7 +67,7 @@ const selectCurrency = () => {
         currencyImg.src = './assets/BitcoinIcon.svg'
     }
 
-    if(select.value === '￥ Iene japonês'){
+    if (select.value === '￥ Iene japonês') {
         currencyName.innerHTML = 'Iene japonês'
         currencyImg.src = './assets/JpnIconCoin.png'
     }
