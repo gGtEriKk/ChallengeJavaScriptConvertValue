@@ -134,6 +134,7 @@ section {
 
 @media screen and (max-width: 600px) {
     .Container {
+        height: 100%;
         width: 100%;
         margin: 0;
     }
