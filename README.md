@@ -6,8 +6,9 @@ em tempo real cada cotação com o valor atual.
 
 > Resultados do projeto:
 
-<img src="./assets/print-tela-do-projeto.png"   alt="imagem-do-conversor" height=300px>
-<video src="https://github.com/gGtEriKk/ChallengeJavaScriptConvertValue/blob/master/assets/Projeto-conversor-de-moeda-video.mp4" alt="video-do-projeto">
+<p align="center">
+  <img src="./assets/print-tela-do-projeto.png"   alt="imagem-do-conversor">
+</p>
 
 ## 🛠 Ferramentas utilizadas:
 
@@ -17,7 +18,7 @@ em tempo real cada cotação com o valor atual.
 
 ![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
 ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
-![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![JAVASCRIPT](https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E)
 
 ## O que foi desenvolvido:
 
