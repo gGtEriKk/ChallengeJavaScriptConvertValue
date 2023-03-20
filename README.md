@@ -6,9 +6,8 @@ em tempo real cada cotação com o valor atual.
 
 > Resultados do projeto:
 
-<p align="center">
-    <img src="./assets/print-tela-do-projeto.png"   alt="imagem-do-conversor" height=300px>
-</p>
+<img src="./assets/print-tela-do-projeto.png"   alt="imagem-do-conversor" height=300px>
+![video-do-projeto](https://github.com/gGtEriKk/ChallengeJavaScriptConvertValue/blob/master/assets/Projeto-conversor-de-moeda-video.mp4)
 
 ## 🛠 Ferramentas utilizadas:
 
